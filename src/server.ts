@@ -1,19 +1,15 @@
 import fastify from 'fastify';
-import { knex } from './database';
 import { env } from './env';
+import { transactionsRoutes } from './routes/transactions';
 
 const app = fastify()
 
-app.get('/hello', async () => {
-  const transaction = await knex('transactions')
-  .where('amount', 100)
-  .select('*')
+app.register(transactionsRoutes)
 
-  return transaction
-})
-
-app.listen({
-  port: env.PORT,
-}).then(() => {
-  console.log('HTTP server runing!')
-})
+app
+  .listen({
+    port: env.PORT,
+  })
+  .then(() => {
+    console.log('HTTP server runing!')
+  })

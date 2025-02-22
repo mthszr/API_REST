@@ -1,5 +1,6 @@
 import request from 'supertest'
-import { afterAll, beforeAll, describe, expect, it, test } from 'vitest'
+import { afterAll, beforeAll, beforeEach, describe, expect, it, test } from 'vitest'
+import { execSync } from 'node:child_process'
 import { app } from '../src/app'
 
 describe('Transaction routes', () => {
@@ -9,6 +10,11 @@ describe('Transaction routes', () => {
 
   afterAll(async () => {
     await app.close()
+  })
+
+  beforeEach(async () => {
+    execSync('npm run knex migrate:rollback --all')
+    execSync('npm run knex migrate:latest')
   })
 
   it('should be able to create a new transaction', async () => {
@@ -32,6 +38,10 @@ describe('Transaction routes', () => {
       })
 
       const cookies = createTransactionResponse.get('Set-Cookie')
+
+      if (!cookies) {
+        throw new Error('No cookies found')
+      }
 
       const listTransactionsResponse = await request(app.server)
       .get('/transactions')

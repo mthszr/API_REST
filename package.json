@@ -12,6 +12,7 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
     "@rocketseat/eslint-config": "^2.2.2",
     "@types/node": "^22.13.4",
     "eslint": "^9.20.1",

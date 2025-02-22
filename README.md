@@ -1,10 +1,10 @@
-# Regras Funcionais (RF)
-- (❌) **Criar Transação:** O usuário deve conseguir criar uma nova transação.
-- (❌) **Resumo da Conta:** O sistema deve fornecer um resumo (saldo) da conta do usuário.
-- (❌) **Listar Transações:** O usuário pode listar todas as transações já realizadas.
-- (❌) **Visualizar Transação Única:** O usuário pode acessar os detalhes de uma transação específica.
+# Functional Requirements (FR)
+- (❌) **Create Transaction:** The user must be able to create a new transaction.
+- (❌) **Account Summary:** The system must provide a summary (balance) of the user's account.
+- (❌) **List Transactions:** The user can list all transactions that have occurred.
+- (❌) **View Single Transaction:** The user can access the details of a specific transaction.
 
-# Regras de Negócio (RN)
-- (❌) **Tipo de Transação:** Cada transação pode ser de crédito (que soma ao total) ou de débito (que subtrai do total).
-- (❌) **Identificação do Usuário:** É necessário identificar o usuário em cada requisição, garantindo que as ações e os dados estejam vinculados a ele.
-- (❌) **Permissão de Visualização:** O usuário só pode visualizar as transações que ele mesmo criou.
+# Business Rules (BR)
+- (❌) **Transaction Type:** Each transaction can be a credit (which adds to the total) or a debit (which subtracts from the total).
+- (❌) **User Identification:** It is necessary to identify the user in every request, ensuring that actions and data are linked to them.
+- (❌) **View Permission:** The user can only view the transactions they have created.

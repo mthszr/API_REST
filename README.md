@@ -6,5 +6,5 @@
 
 # Business Rules (BR)
 - (✅) **Transaction Type:** Each transaction can be a credit (which adds to the total) or a debit (which subtracts from the total).
-- (❌) **User Identification:** It is necessary to identify the user in every request, ensuring that actions and data are linked to them.
-- (❌) **View Permission:** The user can only view the transactions they have created.
+- (✅) **User Identification:** It is necessary to identify the user in every request, ensuring that actions and data are linked to them.
+- (✅) **View Permission:** The user can only view the transactions they have created.

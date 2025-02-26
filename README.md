@@ -1,4 +1,29 @@
-## What I Learned
+# Transactions API
+
+## 🚀 Project Overview
+A RESTful API for managing financial transactions with user authentication and balance tracking.
+
+## 🛠 Technologies
+- Node.js
+- TypeScript
+- Fastify
+- Knex
+- SQLite/PostgreSQL
+- Vitest
+- Supertest
+- Zod
+- ESLint
+- Biome
+
+## 🚦 API Routes
+
+### Transactions
+- `POST /transactions` - Create a new transaction
+- `GET /transactions` - List all transactions
+- `GET /transactions/:id` - Get transaction details
+- `GET /transactions/summary` - Get account balance
+
+## 📝 What I Learned
 
 ### 1. Environment Configuration & Validation
 - Managing environment variables with `dotenv`

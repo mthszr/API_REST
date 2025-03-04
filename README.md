@@ -29,14 +29,11 @@ npm run start:dev
 ### Testing
 
 ```bash
-# Run unit tests
+# Run all tests
 npm test
 
-# Run e2e tests
-npm run test:e2e
-
-# Run test coverage
-npm run test:coverage
+# Run tests in watch mode
+npm test -- --watch
 ```
 
 ## 🚦 API Routes

@@ -1,6 +1,52 @@
 ## 🚀 Project Overview
 A RESTful API for managing financial transactions with user authentication and balance tracking.
 
+## 🔧 Getting Started
+
+### Prerequisites
+- Node.js 18+
+- PostgreSQL
+
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/mthszr/transactions-api.git
+
+# Install dependencies
+npm install
+
+# Set up environment variables
+cp .env.example .env
+# Edit .env with your database credentials
+
+# Run migrations
+npx prisma migrate dev
+
+# Start development server
+npm run start:dev
+```
+
+### Testing
+
+```bash
+# Run unit tests
+npm test
+
+# Run e2e tests
+npm run test:e2e
+
+# Run test coverage
+npm run test:coverage
+```
+
+## 🚦 API Routes
+
+### Transactions
+- `POST /transactions` - Create a new transaction
+- `GET /transactions` - List all transactions
+- `GET /transactions/:id` - Get transaction details
+- `GET /transactions/summary` - Get account balance
+
 ## 🛠 Technologies
 - Node.js
 - TypeScript
@@ -13,13 +59,16 @@ A RESTful API for managing financial transactions with user authentication and b
 - ESLint
 - Biome
 
-## 🚦 API Routes
+## ✅ Functional Requirements (FR)
+- (✓) **Create Transaction:** The user must be able to create a new transaction.
+- (✓) **Account Summary:** The system must provide a summary (balance) of the user's account.
+- (✓) **List Transactions:** The user can list all transactions that have occurred.
+- (✓) **View Single Transaction:** The user can access the details of a specific transaction.
 
-### Transactions
-- `POST /transactions` - Create a new transaction
-- `GET /transactions` - List all transactions
-- `GET /transactions/:id` - Get transaction details
-- `GET /transactions/summary` - Get account balance
+## 📋 Business Rules (BR)
+- (✓) **Transaction Type:** Each transaction can be a credit (which adds to the total) or a debit (which subtracts from the total).
+- (✓) **User Identification:** It is necessary to identify the user in every request, ensuring that actions and data are linked to them.
+- (✓) **View Permission:** The user can only view the transactions they have created.
 
 ## 📝 What I Learned
 
@@ -57,14 +106,3 @@ A RESTful API for managing financial transactions with user authentication and b
 - ESLint configuration
 - npm scripts for automation
 - Git version control
-
-## ✅ Functional Requirements (FR)
-- (✓) **Create Transaction:** The user must be able to create a new transaction.
-- (✓) **Account Summary:** The system must provide a summary (balance) of the user's account.
-- (✓) **List Transactions:** The user can list all transactions that have occurred.
-- (✓) **View Single Transaction:** The user can access the details of a specific transaction.
-
-## 📋 Business Rules (BR)
-- (✓) **Transaction Type:** Each transaction can be a credit (which adds to the total) or a debit (which subtracts from the total).
-- (✓) **User Identification:** It is necessary to identify the user in every request, ensuring that actions and data are linked to them.
-- (✓) **View Permission:** The user can only view the transactions they have created.

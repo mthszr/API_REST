@@ -1,5 +1,5 @@
 ## 🚀 Project Overview
-A RESTful API for managing financial transactions with user authentication and balance tracking.
+a RESTful API built with Node.js and Fastify, for efficient transaction management. Users can create, list, and view transactions while maintaining account balance summaries. Each request is strictly tied to the user’s identity, ensuring that data remains private and users can only interact with their own transactions.
 
 ## 🔧 Getting Started
 
